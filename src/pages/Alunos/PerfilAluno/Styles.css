@@ -1,0 +1,377 @@
+/* CONTAINER PRINCIPAL */
+.dashboard-aluno {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  /*padding: 40px;*/
+  margin-left: var(--sidebar-collapsed-width);
+  max-width: 1200px;
+  width: 100%;
+  transition: margin-left var(--transition-speed);
+}
+
+@media (min-width: 1024px) {
+  .dashboard-aluno {
+    margin-left: 0;
+  }
+}
+
+/* HEADER COM BUSCA */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  color: var(--cor-primaria);
+}
+
+/* TOPO PERFIL */
+.dashboard-topo {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.info-aluno {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nome-aluno {
+  font-size: 28px;
+  color: var(--cor-primaria);
+  margin: 0;
+}
+
+.badge-aluno {
+  background: var(--cor-fundo-suave);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  width: fit-content;
+}
+
+/* AVATAR */
+.avatar-wrapper {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid var(--cor-primaria);
+  object-fit: cover;
+  background-color: var(--cor-clara);
+}
+
+/* Avatar quando não tem imagem */
+.avatar-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--cor-primaria);
+  background-color: var(--cor-fundo-suave);
+}
+
+/* Botão editar */
+.btn-edit-foto {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background-color: var(--cor-destaque);
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+  z-index: 10;
+}
+
+.btn-edit-foto:hover {
+  transform: scale(1.1);
+  background-color: var(--cor-secundaria);
+}
+
+/*  DIVISOR */
+.divisor-perfil {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--cor-primaria),
+    transparent
+  );
+  opacity: 0.3;
+  margin: 8px 0;
+  width: 100%;
+}
+
+
+/* CARD SOBRE MIM */
+.dashboard-card-bg {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: 0.2s ease;
+}
+
+.dashboard-card-bg:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* TÍTULO */
+.titulo-bloco {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--cor-primaria);
+}
+
+/* TEXTAREA BONITO */
+.textarea-bio {
+  width: 100%;
+  min-height: 120px;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  background-color: #f9fafb;
+  resize: none;
+  transition: all 0.2s ease;
+  box-shadow: inset 0 0 0 1px #e5e7eb;
+}
+
+/* Focus elegante */
+.textarea-bio:focus {
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 2px var(--cor-primaria);
+}
+
+
+/* BIO CARD */
+.bio-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bio-texto {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444;
+  white-space: pre-line;
+}
+
+/* BOTÕES */
+.btn-editar {
+  background: transparent;
+  border: none;
+  color: var(--cor-primaria);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bio-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-cancelar {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-salvar {
+  background: var(--cor-primaria);
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-salvar:hover {
+  opacity: 0.9;
+}
+/* BIO CARD */
+.bio-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bio-texto {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444;
+  white-space: pre-line;
+}
+
+/* BOTÕES */
+.btn-editar {
+  background: transparent;
+  border: none;
+  color: var(--cor-primaria);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bio-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-cancelar {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-salvar {
+  background: var(--cor-primaria);
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-salvar:hover {
+  opacity: 0.9;
+}
+
+/* VAGAS (CORRIGIDO)*/
+
+.titulo-secao-perfil {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--cor-primaria);
+}
+.vagas-grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.vaga-card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  border-bottom: 4px solid transparent;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.vaga-card:hover {
+  transform: translateY(-5px);
+  border-bottom: 4px solid var(--cor-primaria);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+}
+
+.vaga-card h4 {
+  color: var(--cor-primaria);
+  margin: 8px 0;
+}
+
+.vaga-local {
+  font-size: 13px;
+  color: var(--cor-escura);
+}
+
+/* TABELA CANDIDATURAS*/
+.candidaturas-header,
+.candidaturas-linha {
+  display: grid;
+  grid-template-columns: 0.6fr 2fr 1.2fr 1fr 1fr;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.candidaturas-header {
+  font-weight: 700;
+  color: var(--cor-primaria);
+  border-bottom: 1px solid var(--cor-fundo-suave);
+}
+
+.candidaturas-linha {
+  border-bottom: 1px solid var(--cor-fundo-suave);
+}
+
+.empresa-avatar {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: var(--cor-fundo-suave);
+  color: var(--cor-primaria);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.status-badge.is-aviso {
+  background-color: #fff8e1;
+  color: var(--cor-aviso);
+}
+
+.status-badge.is-sucesso {
+  background-color: #e8f5e9;
+  color: var(--cor-sucesso);
+}
+
+.status-badge.is-erro {
+  background-color: #ffebee;
+  color: var(--cor-secundaria);
+}

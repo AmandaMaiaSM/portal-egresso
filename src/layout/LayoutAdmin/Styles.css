@@ -1,0 +1,44 @@
+
+.containerLayoutAdmin {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Área principal */
+.mainLayoutAdmin {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: var(--sidebar-width);
+  transition: margin-left 0.3s ease;
+  overflow-y: auto;
+}
+
+/* Quando sidebar está fechada */
+.sidebar-admin.fechada ~ .mainLayoutAdmin {
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 768px) {
+
+  .mainLayoutAdmin {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .sidebar-admin {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    height: 100vh;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar-admin.ativa {
+    left: 0;
+  }
+
+}

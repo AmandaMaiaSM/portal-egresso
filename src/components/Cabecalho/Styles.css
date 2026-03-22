@@ -1,0 +1,66 @@
+/* HEADER */
+.cabecalho-principal {
+    background: linear-gradient(135deg, var(--cor-primaria), #2c4f9e);
+    padding: 20px 2%; /**/
+    border-radius: 0 0 30px 30px;
+}
+.menu-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-iema {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo-iema:hover {
+    transform: scale(1.05);
+}
+
+.links-navegacao {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.links-navegacao a {
+    color: var(--cor-clara);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.links-navegacao a:hover {
+    color: var(--cor-destaque);
+}
+
+/* BOTÃO ENTRAR */
+.botao-entrar-header {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-entrar-header:hover {
+    transform: translateY(-2px);
+    /* Adicionando um destaque visual no botão */
+    border-bottom: 3px solid var(--cor-destaque);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bt-entrar {
+    background-color: transparent;
+}
+
+.bt-entrar-icone {
+    width: 30px;
+    height: 30px;
+}
+

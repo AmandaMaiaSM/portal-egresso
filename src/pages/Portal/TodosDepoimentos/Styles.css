@@ -1,0 +1,128 @@
+/* Segue o padrão da .layout-pagina-Parceiras */
+.layout-pagina-Depoimentos {
+  background-color: var(--cor-clara);
+  min-height: 100vh;
+}
+
+.conteudo-principal-Depoimentos {
+  padding-top: 20px; 
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.topo-paginas {
+  text-align: left;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.topo-paginas h1 {
+  color: var(--cor-primaria);
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.topo-paginas p {
+  color: var(--cor-escura);
+  opacity: 0.8;
+}
+
+/* Grid identico ao .grid-parceiras */
+.grid-depoimentos {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+  justify-content: center;
+  gap: 25px;
+  padding: 20px 0;
+  margin-top: 10px !important;
+}
+
+/* Card de Depoimento seguindo o design do .card-parceira */
+.card-depoimento {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  border-bottom: 4px solid var(--cor-primaria); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 420px; 
+
+}
+
+.card-depoimento:hover {
+  transform: translateY(-5px);
+}
+
+/* Container da Foto no padrão da .logo-container-parceiro */
+.foto-container-depoimento {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foto-container-depoimento img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--cor-fundo-suave);
+}
+
+
+.card-depoimento h3 {
+  color: var(--cor-primaria);
+  font-size: 1.3rem;
+  margin: 10px 0 5px 0;
+}
+
+/* Tag de curso no padrão da .card-parceira span */
+.card-depoimento .curso-tag {
+  background-color: var(--cor-fundo-suave);
+  color: var(--cor-primaria);
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.texto-depoimento {
+  font-style: italic;
+  color: var(--cor-escura);
+  opacity: 0.9;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Botão seguindo o padrão da  */
+.btn-ler-depoimento {
+  margin-top: auto; 
+  background-color: var(--cor-primaria);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.btn-ler-depoimento:hover {
+  background-color: var(--cor-secundaria);
+}

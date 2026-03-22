@@ -1,0 +1,136 @@
+
+/* SIDEBAR BASE  */
+
+.sidebar-aluno {
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: var(--cor-primaria);
+  color: var(--cor-clara);
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 15px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+
+  transition: width var(--transition-speed) ease;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Sidebar fechada */
+.sidebar-aluno.fechada {
+  width: var(--sidebar-collapsed-width);
+}
+
+
+/* HEADER */
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.sidebar-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--cor-clara);
+  white-space: nowrap;
+}
+
+.menu-icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.menu-icon:hover {
+  transform: scale(1.08);
+}
+
+
+/* NAVEGAÇÃO */
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+
+/* ITEM */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 12px 14px;
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--cor-clara);
+  text-decoration: none;
+
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
+  white-space: nowrap;
+}
+.logo-sidebar{
+  
+  margin-top: 25px;
+  opacity: 0.5;
+}
+
+/* TEXTO */
+.nav-item span {
+  transition: opacity var(--transition-speed);
+}
+
+/* HOVER */
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  padding-left: 18px;
+}
+
+/* ATIVO */
+.nav-item.active {
+  background-color: rgba(242, 129, 29, 0.22);
+  border-left: 4px solid var(--cor-destaque);
+  padding-left: 14px;
+  font-weight: 600;
+}
+
+
+/* FOOTER */
+
+.sidebar-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 16px;
+}
+
+
+/* FECHADA */
+
+.sidebar-aluno.fechada .nav-item span,
+.sidebar-aluno.fechada h2 {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Remove deslocamento quando fechada */
+.sidebar-aluno.fechada .nav-item:hover {
+  padding-left: 14px;
+}
+
+
+/* UTIL */
+
+.escondido {
+  display: none;
+}

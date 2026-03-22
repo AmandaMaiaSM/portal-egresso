@@ -1,0 +1,78 @@
+.dashboard-grid-insercao{
+width:100%;
+max-width:1400px;
+margin:0 auto;
+padding:32px;
+display:grid;
+gap:24px;
+}
+
+.dashboard-header-insercao h1{
+margin:0;
+color:var(--cor-primaria);
+}
+
+.dashboard-header-insercao p{
+color:#555;
+}
+
+.main-content-insercao{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:24px;
+}
+
+.card-container-insercao{
+background:white;
+padding:24px;
+border-radius:12px;
+box-shadow:0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card-container-insercao h3{
+margin-top:0;
+margin-bottom:20px;
+border-left:4px solid var(--cor-destaque);
+padding-left:12px;
+color:var(--cor-primaria);
+}
+
+.form-empresa-insercao{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+.form-empresa-insercao input,
+.form-empresa-insercao select{
+padding:12px;
+border-radius:6px;
+border:1px solid var(--cor-fundo-suave);
+}
+
+.lista-empresas-insercao{
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.empresa-item-insercao{
+padding:16px;
+border:1px solid var(--cor-fundo-suave);
+border-radius:10px;
+background:white;
+}
+
+.login-temp{
+margin-top:10px;
+font-size:13px;
+color:var(--cor-aviso);
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.erro{
+color:red;
+font-size:13px;
+}

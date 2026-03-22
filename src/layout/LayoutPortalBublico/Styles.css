@@ -1,0 +1,253 @@
+/* CONTAINER PRINCIPAL */
+.containerLayoutPortalPublico {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MAIN */
+.mainLayoutPortalPublico {
+    flex: 1;
+    padding: 20px 2%;
+}
+
+/* Espaçamento entre seções */
+.mainLayoutPortalPublico section {
+    margin-bottom: 80px;
+}
+
+
+/* SEÇÃO GENÉRICA */
+
+.secao {
+    text-align: center;
+    padding: 100px 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    background: white;
+    color: var(--cor-escura);
+}
+
+.secao h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.secao p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* BOTÕES */
+.botao-destaque {
+    margin-top: 30px;
+    background-color: var(--cor-destaque);
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-destaque:hover {
+    background-color: var(--cor-secundaria);
+}
+
+
+/* TÍTULOS */
+
+.titulo-secao {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    color: var(--cor-escura);
+}
+
+
+/* EMPRESAS */
+
+.secao-empresas {
+    background: white;
+    padding: 100px 0;
+    border-radius: 10px 10px 30px 30px; 
+}
+
+.container-empresas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.texto-empresas {
+    flex: 1;
+    min-width: 280px;
+}
+
+.texto-empresas h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--cor-primaria);
+}
+
+.texto-empresas p {
+    margin-bottom: 15px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.botao-conhecer-vagas {
+    margin-top: 20px;
+    background: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-conhecer-vagas:hover {
+    background: #1a356a; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.imagem-empresas {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-empresas img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+}
+
+/* ESTATÍSTICAS */
+.estatisticas-empresas {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--cor-primaria); 
+    padding: 50px 20px;
+    border-radius: 15px;
+    margin-top: 60px; 
+    color: white;
+    box-shadow: 0 10px 25px rgba(32, 65, 129, 0.15);
+    flex-wrap: wrap;
+}
+
+.estatistica-item {
+    text-align: center;
+    min-width: 150px; 
+}
+
+.estatistica-item .numero {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--cor-destaque); 
+}
+
+.estatistica-item .rotulo {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+/* DEPOIMENTOS */
+
+.secao-depoimentos {
+    background: linear-gradient(
+        120deg,
+        var(--cor-primaria),
+        #2c4f9e,
+        var(--cor-secundaria)
+    );
+    padding: 100px 8%;
+    color: white;
+    border-radius: 40px 40px 0 0;
+}
+
+.container-depoimentos {
+    text-align: center;
+}
+
+.cards-depoimentos {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-depoimento {
+    background: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 20px;
+    width: 280px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card-depoimento:hover {
+    transform: translateY(-8px);
+}
+
+.card-depoimento img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.card-depoimento h3 {
+    margin-bottom: 5px;
+    color: var(--cor-primaria);
+}
+
+.card-depoimento span {
+    font-size: 0.85rem;
+    color: gray;
+}
+
+.card-depoimento p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+
+/* FOOTER */
+
+.painel-footer {
+    background-color: #eaeaea;
+    padding: 25px;
+    text-align: center;
+    color: var(--cor-escura);
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+    .mainLayoutPortalPublico {
+        padding: 15px;
+    }
+
+    .secao {
+        padding: 60px 20px;
+    }
+
+    .estatisticas-empresas {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

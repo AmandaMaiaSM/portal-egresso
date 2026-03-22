@@ -1,0 +1,138 @@
+/* Layout Geral */
+.layoutlogin-aluno {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container-login {
+  display: flex;
+  width: 100%;
+  max-width: 750px; 
+  min-height: 480px; 
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.92);
+  
+}
+
+/* Painel Azul (Esquerdo) */
+.painel-visual {
+  flex: 1;
+  background-color: var(--cor-primaria);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.painel-visual img {
+  width: 190px;
+  margin-bottom: 20px;
+}
+
+.painel-visual h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* Painel de Formulário (Direito) */
+.painel-formulario {
+  flex: 1.2;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.painel-formulario h1 {
+  color: var(--cor-primaria);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.painel-formulario p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Inputs */
+.campo-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.campo-input label {
+  font-weight: bold;
+  color: var(--cor-primaria);
+  margin-bottom: 5px;
+}
+
+.campo-input input {
+  padding: 12px;
+  border: 2px solid var(--cor-neve-fria);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.campo-input input:focus {
+  border-color: var(--cor-primaria);
+}
+
+/* Botão seguindo o padrão de Parceiras */
+.btn-login {
+  background-color: var(--cor-primaria);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.btn-login:hover {
+  background-color: var(--cor-secundaria); 
+}
+
+/* Links */
+.links-auxiliares {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.links-auxiliares a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.links-auxiliares span {
+  display: block;
+  margin-top: 10px;
+  color: #888;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container-login {
+    flex-direction: column;
+  }
+  .painel-visual {
+    padding: 20px;
+  }
+}

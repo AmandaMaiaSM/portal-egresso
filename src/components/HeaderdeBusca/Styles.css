@@ -1,0 +1,49 @@
+
+/* HEADER ALUNO */
+
+.header-aluno {
+  position: fixed;
+  top: 0;
+  /*border-radius: 20px;*/
+
+  /* SIDEBAR ABERTA */
+  left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+
+  height: 70px;
+  background-color: var(--cor-primaria);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 1100;
+
+  /* ANIMAÇÃO SUAVE */
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+
+/* QUANDO SIDEBAR FECHAR */
+
+
+.layout-fechado .header-aluno {
+  left: var(--sidebar-collapsed-width);
+  width: calc(100% - var(--sidebar-collapsed-width));
+}
+
+.header-left {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+
+/* LOGO */
+
+.logo-header {
+  height: 45px;
+  object-fit: contain;
+}

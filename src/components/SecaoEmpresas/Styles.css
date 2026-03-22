@@ -1,0 +1,101 @@
+.secao-empresas {
+    background: white;
+    padding: 80px 0;
+    border-radius: 10px 10px 30px 30px;
+}
+
+.container-empresas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.texto-empresas {
+    flex: 1;
+}
+
+.texto-empresas h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--cor-primaria);
+}
+
+.texto-empresas p {
+    margin-bottom: 15px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.botao-conhecer-vagas {
+    margin-top: 20px;
+    background: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-conhecer-vagas:hover {
+    background: var(--cor-secundaria);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.imagem-empresas {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-empresas img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+}
+
+/* Faixa de Estatísticas */
+.estatisticas-empresas {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--cor-primaria);
+    padding: 50px 20px;
+    border-radius: 15px;
+    margin: 60px auto 0;
+    max-width: 1100px; 
+    color: white;
+    box-shadow: 0 10px 25px rgba(32, 65, 129, 0.2);
+}
+
+.estatistica-item .numero {
+    display: block;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--cor-destaque);
+}
+
+.estatistica-item .rotulo {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .container-empresas {
+        flex-direction: column;
+        text-align: center;
+    }
+    .estatisticas-empresas {
+        flex-direction: column;
+        gap: 40px;
+        margin: 40px 20px 0;
+    }
+}

@@ -1,0 +1,74 @@
+.dashboard-metrics-HR {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.historico-secao-HR h3,
+.relatorios-performance-HR h3 {
+  color: var(--cor-primaria);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.metric-card-HR {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border-bottom: 4px solid var(--cor-primaria);
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.metric-card-HR .valor-HR {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--cor-primaria);
+  display: block;
+}
+
+.metric-card-HR:nth-child(1) {
+  border-bottom-color: var(--cor-sucesso);
+}
+
+.metric-card-HR:nth-child(2) {
+  border-bottom-color: var(--cor-aviso);
+}
+
+.tabela-container-HR {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.tabela-estilizada-HR {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-estilizada-HR th {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 2px solid var(--cor-fundo-suave);
+  color: var(--cor-primaria);
+}
+
+.tabela-estilizada-HR td {
+  padding: 12px;
+  border-bottom: 1px solid var(--cor-fundo-suave);
+}
+
+.badge-sucesso-HR {
+  background-color: var(--cor-sucesso);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+.titulo-container-HR h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: var(--cor-primaria);
+}

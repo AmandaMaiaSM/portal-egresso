@@ -1,0 +1,186 @@
+/* PÁGINA CURRÍCULO */
+.curriculum-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* HEADER */
+.curriculum-header-topo h1 {
+  font-size: 40px;
+  color: var(--cor-primaria);
+}
+
+.curriculum-header p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* GRID */
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+}
+
+.curriculum-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* FORM */
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row-curriculo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cor-primaria);
+}
+
+.input-field {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: var(--cor-neve-fria);
+  font-size: 14px;
+}
+
+.input-field.disabled {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+/* BIOGRAFIA */
+.biografia-box {
+  position: relative;
+  background-color: #f9fafc;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #e1e5ee;
+}
+
+.biografia-textarea {
+  width: 100%;
+  min-height: 140px;
+  border: none;
+  resize: none;
+  background: transparent;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.contador-texto {
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  font-size: 12px;
+  color: #888;
+}
+
+.texto-informativo {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* SKILLS */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tag-skill-edit {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tag-skill-edit button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ADD SKILL->  habilidade*/
+.add-skill-row {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-adicionar-skill {
+  background-color: var(--cor-primaria);
+  color: white;
+  border: none;
+  width: 40px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* PDF */
+.btn-gerar-pdf {
+  width: 100%;
+  border: 2px solid var(--cor-primaria);
+  background: transparent;
+  color: var(--cor-primaria);
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.curriculum-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn-salvar-curriculo {
+  background-color: var(--cor-sucesso);
+  color: white;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row-curriculo {
+    grid-template-columns: 1fr;
+  }
+
+  .curriculum-footer {
+    justify-content: center;
+  }
+}

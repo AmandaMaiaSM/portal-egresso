@@ -1,0 +1,131 @@
+/* SEÇÃO GERAL*/
+.form-config--ConfigEMpresa {
+  margin-top: 20px;
+}
+
+.grid-form-ConfigEMpresa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .grid-form-ConfigEMpresa {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CAMPOS DO FORMULÁRIO= */
+.campo-ConfigEMpresa {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo-ConfigEMpresa label {
+  font-weight: 600;
+  color: var(--cor-primaria);
+  font-size: 0.85rem;
+}
+
+.campo-ConfigEMpresa input {
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo-ConfigEMpresa input:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 2px rgba(32, 65, 129, 0.15);
+}
+
+/* Campos bloqueados */
+.campo-ConfigEMpresa input:disabled {
+  background-color: var(--cor-fundo-suave);
+  cursor: not-allowed;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/*  BOTÕES*/
+
+.btn-salvar-ConfigEMpresa {
+  margin-top: 24px;
+  width: fit-content;
+  padding: 10px 22px;
+}
+
+/* Feedback de sucesso */
+.feedback-sucesso-ConfigEMpresa {
+  margin-top: 14px;
+  color: var(--cor-sucesso);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* CARD DE CONFIGURAÇÃO */
+.config-card-ConfigEMpresa {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.card-header-flex-ConfigEMpresa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card-header-flex-ConfigEMpresa h3 {
+  margin: 0;
+  color: var(--cor-primaria);
+}
+
+/* LOGOUT / SEGURANÇA*/
+
+.logout-section-ConfigEMpresa {
+  border-top: 4px solid var(--cor-secundaria);
+}
+
+.btn-perigo-ConfigEMpresa {
+  background-color: var(--cor-secundaria);
+  color: white;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 12px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-perigo-ConfigEMpresa:hover {
+  filter: brightness(0.92);
+  transform: translateY(-1px);
+}
+
+/* 
+   HEADER DA PÁGINA*/
+.secao-header-ConfigEMpresa {
+  margin-bottom: 30px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(32, 65, 129, 0.25);
+}
+
+.secao-header-ConfigEMpresa h1 {
+  font-size: 2rem;
+  color: var(--cor-primaria);
+  margin-bottom: 4px;
+}
+
+.secao-header-ConfigEMpresa  p {
+  color: var(--cor-escura);
+  opacity: 0.75;
+  font-size: 0.95rem;
+}

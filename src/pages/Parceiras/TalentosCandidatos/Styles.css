@@ -1,0 +1,154 @@
+/* ===== CONTAINER PRINCIPAL ===== */
+.pagina-wrapper-talentosCandidatos {
+  display: flex;
+}
+
+.main-content-talentosCandidatos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+}
+
+/* ===== HEADER ===== */
+.secao-header-talentosCandidatos {
+  border-bottom: 1px solid rgba(32, 65, 129, 0.25);
+  padding-bottom: 12px;
+}
+
+.secao-header-talentosCandidatos h1 {
+  font-size: 2rem;
+  color: var(--cor-primaria);
+}
+
+/* ===== BLOCO VAGA (AGORA CORRETO) ===== */
+.bloco-vaga-talentosCandidatos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* ===== HEADER DA VAGA ===== */
+.header-vaga-talentosCandidatos {
+  width: 100%;
+  background: white;
+  border: none;
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+.header-vaga-info-talentosCandidatos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-vaga-talentosCandidatos h2 {
+  font-size: 1.4rem;
+  color: var(--cor-primaria);
+}
+
+.tag-setor-talentosCandidatos {
+  background-color: var(--cor-fundo-suave);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.icone-toggle-talentosCandidatos {
+  font-size: 1.1rem;
+  color: var(--cor-primaria);
+}
+
+/* ===== LISTA ===== */
+.grid-candidatos-talentosCandidatos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+  width: 100%;
+}
+
+/* ===== CARD ===== */
+.cardtalentosCandidatos {
+  width: 100%;
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== TEXTO ===== */
+.card-corpo-talentosCandidatos h3 {
+  color: var(--cor-primaria);
+  margin-bottom: 6px;
+}
+
+.badge-curso-talentosCandidatos {
+  background-color: var(--cor-fundo-suave);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.biografia-preview-talentosCandidatos {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* ===== FOOTER ===== */
+.card-footer-talentosCandidatos {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== STATUS ===== */
+.status-tag {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status-tag.candidato {
+  border: 1px solid var(--cor-aviso);
+  color: var(--cor-aviso);
+}
+
+.status-tag.selecionado {
+  border: 1px solid var(--cor-destaque);
+  color: var(--cor-destaque);
+}
+
+/* ===== BOTÕES ===== */
+.btn-primario-talentosCandidatos {
+  background-color: var(--cor-sucesso);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+}
+
+.btn-secundario-talentosCandidatos {
+  border: 1px solid var(--cor-primaria);
+  background: transparent;
+  color: var(--cor-primaria);
+  padding: 8px 14px;
+  border-radius: 8px;
+}

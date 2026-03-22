@@ -1,0 +1,110 @@
+
+.sidebar-aluno {
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: var(--cor-primaria); 
+  color: var(--cor-clara);
+  display: flex;
+  flex-direction: column;
+  transition: width var(--transition-speed) ease;
+  padding: 20px 15px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar-aluno.fechada {
+  width: var(--sidebar-collapsed-width);
+}
+
+/* Header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.menu-icon {
+  width: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Navegação e Botões */
+.sidebar-nav {
+  background-color: var(--cor-destaquer);
+  color: var(--cor-clara);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+/* Nomes dos botões com a COR DE DESTAQUE */
+.nav-item span:not(.icone-nav), 
+.sidebar-header h2 {
+  color: var(--cor-clara); 
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  transition: all var(--transition-speed);
+  white-space: nowrap;
+  text-decoration: none;
+
+}
+/* Quando o botão está ativo */
+.nav-item.active {
+  background-color: rgba(242, 129, 29, 0.2); 
+  border-left: 4px solid var(--cor-destaque);
+}
+/* Efeito ao passar o mouse */
+
+.icone-nav {
+  width: 25px;   
+  height: 25px;  
+  object-fit: contain;
+  margin-right: 10px; 
+}
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+/* Footer */
+.sidebar-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--cor-primaria1);
+  padding-top: 20px;
+}
+
+/* Classe para esconder textos */
+.escondido {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  transition: opacity var(--transition-speed), visibility var(--transition-speed);
+}
+
+/* Ajuste fino para quando estiver fechada */
+.fechada .sidebar-nav span:not(.icone-nav),
+.fechada h2 {
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}

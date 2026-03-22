@@ -1,0 +1,38 @@
+@import "./variaveis.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: Inter, sans-serif;
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+}
+html {
+  scroll-behavior: smooth; 
+}
+
+/* Quando a sidebar está aberta (padrão) */
+.content {
+  margin-left: var(--sidebar-width);
+  transition: margin-left var(--transition-speed) ease;
+  padding: 40px;
+}
+
+/* Quando o pai tem a classe 'layout-fechado', a margem diminui */
+.layout-fechado .content {
+  margin-left: var(--sidebar-collapsed-width);
+}
+/* altura real do header */
+:root {
+  --header-height: 70px;
+}
+
+/* área de conteúdo do layout */
+.content {
+  padding-top: calc(var(--header-height) + 20px);
+}

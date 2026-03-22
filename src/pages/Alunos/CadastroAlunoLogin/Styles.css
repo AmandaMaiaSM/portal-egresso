@@ -1,0 +1,189 @@
+
+/* Layout geral */
+
+
+.layout-cadastro-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+ background: linear-gradient(
+    to bottom,
+    rgba(32, 65, 129, 0.95) 0%,
+    rgba(32, 65, 129, 0.75) 25%,
+    var(--cor-fundo-suave) 65%
+  );
+
+  padding: 20px;
+}
+
+/* Container */
+.container-cadastro-login {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+/* Painel visual */
+
+
+.painel-visual-cadastro-login {
+  background: var(--cor-primaria);
+    color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+  text-align: center;
+}
+
+.painel-visual-cadastro-login img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.painel-visual-cadastro-login h2 {
+
+  margin-bottom: 10px;
+  color: white;
+}
+
+.painel-visual-cadastro-login p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  color: white;
+}
+
+
+/* Formulário */
+
+
+.painel-formulario-cadastro-login {
+  padding: 2rem;
+}
+
+.form-cadastroLogin {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-cadastroLogin h1 {
+  margin-bottom: 10px;
+  color: var(--cor-fundo-suave);
+}
+
+
+/* Fieldset  lado direito */
+
+.grupo-form-cadastroLogin {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  
+  padding: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.grupo-form-cadastroLogin legend {
+  font-size: 0.85rem;
+  color: var(--cor-escura);
+  font-weight: 600;
+  padding: 0 6px;
+}
+
+
+/* Inputs */
+
+
+.form-cadastroLogin input,
+.form-cadastroLogin textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+
+  font-size: 0.9rem;
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.form-cadastroLogin input:focus,
+.form-cadastroLogin textarea:focus {
+  border-color: var(--cor-escura);
+}
+
+/* textarea */
+
+.form-cadastroLogin textarea {
+  resize: none;
+  min-height: 90px;
+}
+
+/* ========================= */
+/* Botão */
+/* ========================= */
+
+.btn-primario {
+  margin-top: 10px;
+
+  background: var(--cor-primaria);
+  color: white;
+
+  border: none;
+  padding: 12px;
+
+  border-radius: 8px;
+  cursor: pointer;
+
+  font-size: 0.95rem;
+
+  transition: 0.2s;
+}
+
+.btn-primario:hover {
+  background: #16336b;
+}
+
+/* Link login */
+
+.link-cadastroLogin {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.link-cadastroLogin span {
+  color: var(--primaria);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+/* Responsivo */
+
+
+@media (max-width: 900px) {
+  .container-cadastro-login {
+    grid-template-columns: 1fr;
+  }
+
+  .painel-visual-cadastro-login {
+    display: none;
+  }
+
+  .grupo-form-cadastroLogin {
+    grid-template-columns: 1fr;
+  }
+}

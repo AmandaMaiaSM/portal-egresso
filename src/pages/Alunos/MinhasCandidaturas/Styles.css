@@ -1,0 +1,35 @@
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  width: fit-content;
+  text-transform: uppercase;
+}
+.vagas-MinhasCandidaturas-header-content h1 {
+  color: var(--cor-primaria);
+  font-size: 40px;
+
+}
+
+/* STATUS */
+.status-badge.candidato {
+  background-color: var(--cor-neve-fria);
+  color: var(--cor-primaria);
+}
+
+.status-badge.selecionado {
+  background-color: var(--cor-neve-fria);
+  color: var(--cor-destaque);
+}
+
+.status-badge.contratado {
+  background-color: var(--cor-neve-fria);
+  color: var(--cor-sucesso);
+}
+
+.status-badge.recusado {
+  background-color: var(--cor-neve-fria);
+  color: var(--cor-secundaria);
+}

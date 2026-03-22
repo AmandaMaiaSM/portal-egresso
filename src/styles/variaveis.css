@@ -1,0 +1,24 @@
+:root {
+  --cor-primaria: #204181;
+  --cor-secundaria: #BF2C38;
+  --cor-sucesso: #4EBF4B;
+  --cor-aviso: #F2A413;
+  --cor-destaque: #F2811D;
+
+  --cor-clara: #F2F2F2;
+  --cor-escura: #0D0D0D;
+  --cor-neve-fria: #F2F2F2;
+  --cor-fundo-suave: #E8EDF5;
+
+  /* Adicione as larguras aqui para facilitar a manutenção */
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 80px;
+  --transition-speed: 0.3s;
+}
+
+/* Para o site não ficar embaixo da sidebar */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-fundo-suave);
+}

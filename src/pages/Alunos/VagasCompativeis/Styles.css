@@ -1,0 +1,128 @@
+/* PÁGINA DE VAGAS */
+.vagas-page {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vagas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  gap: 20px;
+}
+.vagas-header-topo h1{
+  font-size: 40px;
+  color: var(--cor-primaria);
+}
+.vagas-header-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+
+/* LISTA DE VAGAS ESTILO LINHA */
+.vagas-lista-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vaga-item-completo {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.2s;
+}
+
+.vaga-item-completo:hover {
+  transform: translateX(8px);
+  border-left: 4px solid var(--cor-primaria);
+}
+
+.vaga-info-principal {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.vaga-avatar-empresa {
+  width: 45px;
+  height: 45px;
+  background: var(--cor-fundo-suave);
+  color: var(--cor-primaria);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.vaga-empresa-nome {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* TAGS */
+.tag-skill {
+  background: var(--cor-fundo-suave);
+  color: var(--cor-primaria);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+/* AÇÕES E BOTÃO */
+.vaga-acoes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.vaga-salario {
+  font-weight: 700;
+  color: var(--cor-sucesso);
+}
+.salario-indefinido {
+  color: #888;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.btn-candidatar {
+  background-color: var(--cor-primaria);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-candidatar:hover {
+  background-color: var(--cor-destaque);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 850px) {
+  .vaga-item-completo {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .vaga-info-principal { flex-direction: column; }
+  .vaga-acoes { align-items: center; }
+  .input-busca { width: 100%; }
+}

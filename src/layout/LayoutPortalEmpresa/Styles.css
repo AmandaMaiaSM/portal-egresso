@@ -1,0 +1,124 @@
+
+/* VARIÁVEIS (pode manter global) */
+
+:root {
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 80px;
+  --header-height: 80px;
+  --bg-content: #f4f7f6;
+}
+
+
+/* CONTAINER PRINCIPAL */
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* SIDEBAR EMPRESA */
+
+.sidebar-aluno,
+.sidebar-empresa {
+  width: var(--sidebar-width);
+  height: 100vh;
+  flex-shrink: 0;
+  transition: width 0.3s ease;
+}
+
+/* Sidebar fechada */
+.layout-fechado .sidebar-aluno,
+.layout-fechado .sidebar-empresa {
+  width: var(--sidebar-collapsed-width);
+}
+
+
+/* ÁREA PRINCIPAL EMPRESA */
+
+.main-area-empresa-layout {
+  flex: 1;
+  min-width: 0;
+  width: calc(100% - var(--sidebar-width));
+  margin-left: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-content);
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+.layout-fechado .main-area-empresa-layout {
+  width: calc(100% - var(--sidebar-collapsed-width));
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+
+/* HEADER EMPRESA */
+.header-aluno {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+  height: var(--header-height);
+  z-index: 1100;
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+/* Sidebar fechada */
+.layout-fechado .header-aluno {
+  left: var(--sidebar-collapsed-width);
+  width: calc(100% - var(--sidebar-collapsed-width));
+}
+
+/* CONTEÚDO EMPRESA */
+
+.content-empresa-layout {
+  flex: 1;
+  min-width: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  padding: 24px;
+  padding-top: 90px;
+  background-color: var(--bg-content);
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .sidebar-aluno,
+  .sidebar-empresa {
+    position: absolute;
+    z-index: 1000;
+    height: 100%;
+  }
+
+  .layout-fechado .sidebar-aluno,
+  .layout-fechado .sidebar-empresa {
+    transform: translateX(-100%);
+  }
+
+  .main-area-empresa-layout {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .header-aluno {
+    left: 0;
+    width: 100%;
+  }
+
+  .layout-fechado .header-aluno {
+    width: 100%;
+  }
+
+  .content-empresa-layout {
+    padding: 16px;
+    padding-top: 80px;
+  }
+}

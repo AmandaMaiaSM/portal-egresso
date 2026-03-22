@@ -1,0 +1,41 @@
+.container-busca {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 2px solid #eee;
+  border-radius: 30px;
+  padding: 5px 15px;
+  max-width: 500px;
+
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.container-busca:focus-within {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 4px 15px rgba(32, 65, 129, 0.15);
+}
+
+.input-busca {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 1rem;
+  background: transparent;
+}
+
+.botao-busca {
+  background: none;
+  border: none;
+  color: var(--cor-primaria);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
