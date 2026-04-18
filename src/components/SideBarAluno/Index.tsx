@@ -6,6 +6,7 @@ import btUsuario from "../../assets/usuario.png";
 import btVagas from "../../assets/vagasCompativeis.png";
 import btCandidaturas from "../../assets/minhasCadidaturas.png";
 import btCurriculo from "../../assets/curriculo.png";
+import btTrilhadeCursos from "../../assets/trilhasdeCursos.png";
 import btConfig from "../../assets/configuracao.png";  
 import btSair from "../../assets/SairDesligar.png";
 import "./Styles.css";
@@ -54,6 +55,11 @@ export default function SideBarAluno({ menuAberto, setMenuAberto }: { menuAberto
         <Link to="/painelAlunoIEMA/curriculo" className={isActive("/painelAlunoIEMA/curriculo")}>
           <img src={btCurriculo} alt="Currículo" className="icone-nav" />
           <span className={!menuAberto ? "escondido" : ""}>Currículo</span>
+        </Link>
+
+        <Link to="/painelAlunoIEMA/Trilhasdecursos" className={isActive("/painelAlunoIEMA/Trilhasdecursos")}>
+          <img src={btTrilhadeCursos} alt="Trilhas de Cursos" className="icone-nav" />
+          <span className={!menuAberto ? "escondido" : ""}>Trilhas de Cursos</span>
         </Link>
 
         <Link to="/painelAlunoIEMA/ConfiguracaoAluno" className={isActive("/painelAlunoIEMA/ConfiguracaoAluno")}>

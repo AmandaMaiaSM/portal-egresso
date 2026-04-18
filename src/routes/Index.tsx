@@ -18,6 +18,9 @@ import Curriculo from "../pages/Alunos/Curriculo/Index";
 import ConfiguracaoAluno from "../pages/Alunos/ConfiguracaoAluno/Index";
 import CadastroAluno from "../pages/Alunos/CadastroAlunoLogin/Index";
 import EsqueciMinhaSenhaAluno from "../pages/Alunos/EsqueciMinhaSenhaAluno/Index";
+import Trilhasdecursos from "../pages/Alunos/Trilhasdecursos/Index";
+import ListaTrilhas from "../pages/Alunos/ListaTrilhasNova/Index";
+import DetalhesCurso from "../pages/Alunos/DetalhesCursoTrilha/Index";
 
 //Paginas para empresa/parceiros
 import LayoutPortalEmpresa from "../layout/LayoutPortalEmpresa/Index";
@@ -75,7 +78,11 @@ export default function AppRoutes() {
           <Route path="MinhasCandidaturas" element={<MinhasCandidaturas />} />
           <Route path="Curriculo" element={<Curriculo />} />
           <Route path="ConfiguracaoAluno" element={<ConfiguracaoAluno />} />
-
+          <Route path="Trilhasdecursos" element={<Trilhasdecursos />} />
+          <Route path="Trilhasnovas" element={<ListaTrilhas tipo="novas" />} />
+          <Route path="Minhastrilhas" element={<ListaTrilhas tipo="realizadas" />} />
+          <Route path="DetalhesCursoTrilha" element={<Navigate to="/painelAlunoIEMA/DetalhesCursoTrilha/html-basico" replace />} />
+          <Route path="DetalhesCursoTrilha/:id" element={<DetalhesCurso />} />
         </Route>
         
 

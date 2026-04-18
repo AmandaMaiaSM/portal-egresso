@@ -1,0 +1,102 @@
+/* Container principal da página */
+.pagina-listagem-ListaTrilhas {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* Header com o botão voltar, título e busca */
+.header-listagem-ListaTrilhas {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.btn-voltar-ListaTrilhas {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.btn-voltar-ListaTrilhas:hover {
+    opacity: 0.85;
+}
+
+.header-listagem-ListaTrilhas h1 {
+    color: var(--cor-primaria);
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Grid de Cards */
+.grid-cards-ListaTrilhas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.estado-vazio-ListaTrilhas {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 36px 20px;
+    border: 1px dashed #cfd6e2;
+    border-radius: 12px;
+    background-color: #f8fafc;
+}
+
+.estado-vazio-ListaTrilhas p {
+    margin: 0;
+    color: var(--cor-escura);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.btn-ver-trilhas-ListaTrilhas {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-ver-trilhas-ListaTrilhas:hover {
+    opacity: 0.9;
+}
+
+/* Ajustes para telas menores (Mobile) */
+@media (max-width: 768px) {
+    .pagina-listagem-ListaTrilhas {
+        padding: 16px;
+    }
+
+    .header-listagem-ListaTrilhas h1 {
+        font-size: 1.6rem;
+    }
+
+    .grid-cards-ListaTrilhas {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
