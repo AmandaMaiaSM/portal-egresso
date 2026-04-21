@@ -209,6 +209,10 @@
   cursor: pointer;
 }
 
+.trilha-resumo {
+  margin: 12px 0 24px;
+}
+
 /* RESPONSIVO */
 @media (max-width: 900px) {
   .page-header {

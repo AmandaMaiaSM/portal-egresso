@@ -1,0 +1,81 @@
+.trilhas-container-PTrilhas {
+  margin-top: 20px;
+}
+.form-group-PTrilhas label {
+  display: block;
+  color: var(--cor-primaria);
+  font-weight: 700;
+}
+.form-group-PTrilhas {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.form-group-PTrilhas input,
+.form-group-PTrilhas textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.modulo-item-PTrilhas {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "titulo remover"
+    "arquivo arquivo";
+  gap: 12px;
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  align-items: start;
+}
+
+.modulo-item-PTrilhas input[type="text"] {
+  grid-area: titulo;
+  min-width: 0;
+}
+
+.modulo-item-PTrilhas input[type="file"] {
+  grid-area: arquivo;
+  width: 100%;
+}
+
+.btn-remover-modulo-PTrilhas {
+  grid-area: remover;
+  justify-self: end;
+  align-self: start;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 50%;
+  background: #f2f2f2;
+  color: #666;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.btn-remover-modulo-PTrilhas:hover {
+  background: #e0e0e0;
+  color: #222;
+}
+
+.btn-detalhes-PTrilhas {
+  background: transparent;
+  border: 2px solid var(--cor-primaria);
+  color: var(--cor-primaria);
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.btn-detalhes-PTrilhas:hover {
+  background: var(--cor-primaria);
+  color: white;
+}

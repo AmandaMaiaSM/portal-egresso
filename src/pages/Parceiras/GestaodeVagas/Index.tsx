@@ -1,15 +1,31 @@
 import { useState } from "react";
 import BucadedePesquisa from "../../../components/BuscadePesquisa/Index";
 import "./Styles.css";
+import PublicarTrilhas from "../../../components/PublicarTrilhas/Index";
 //import { data } from "react-router-dom";
 
 type StatusVaga = "ativa" | "encerrada";
+
+
+type Modulo = {
+  titulo: string;
+  arquivo: File | null;
+};
+
+type Trilha = {
+  nome: string;
+  descricao: string;
+  professores: string;
+  modulos: Modulo[];
+};
 
 export default function GestaoVagas() {
   const [abaAtiva, setAbaAtiva] = useState<"listagem" | "cadastro">("listagem");
   const [cursos, setCursos] = useState<string[]>([]);
   const [cursoInput, setCursoInput] = useState("");
   const [termoBusca, setTermoBusca] = useState("");
+  const [usarTrilhas, setUsarTrilhas] = useState(false);
+  const [trilha, setTrilha] = useState<Trilha | null>(null);
 
   const minhasVagas = [
     {
@@ -216,6 +232,40 @@ export default function GestaoVagas() {
             />
           </div>
 
+          {  /* Opção para usar trilhas */}
+
+          <div className="form-group">
+            <label>Adicionar trilhas?</label>
+
+            <select
+              value={usarTrilhas ? "sim" : "nao"}
+              onChange={(e) => {
+                const ativarTrilhas = e.target.value === "sim";
+                setUsarTrilhas(ativarTrilhas);
+
+                if (!ativarTrilhas) {
+                  setTrilha(null);
+                }
+              }}
+            >
+              <option value="nao">Não</option>
+              <option value="sim">Sim</option>
+            </select>
+          </div>
+
+          {/* Renderização condicional */}
+          {usarTrilhas && (
+            <>
+              <PublicarTrilhas onChange={setTrilha} />
+
+              {trilha && (
+                <p className="trilha-resumo">
+                  Total de módulos: {trilha.modulos.length}
+                </p>
+              )}
+            </>
+          )}
+          
           <button type="submit" className="btn-submit">
             Publicar vaga
           </button>
