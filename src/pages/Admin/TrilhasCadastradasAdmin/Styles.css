@@ -1,0 +1,20 @@
+.acoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-excluir {
+  background: #ffebe6;
+  color: var(--cor-alerta);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.form-group-CTCurso label {
+  display: block;
+  color: var(--cor-primaria);
+  font-weight: 700;
+}

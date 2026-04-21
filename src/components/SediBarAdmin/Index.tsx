@@ -64,6 +64,14 @@ export default function SideBarAdmin({ menuAberto, setMenuAberto }: SideBarAdmin
       ]
     },
     {
+      titulo: "Adcionando trilhas ",
+      itens:[
+        { path: "/painel-admin/cadastrar-trilhas", label: "Cadastrar Trilhas"},
+        { path: "/painel-admin/trilhasAdmin-cadastradas", label: "Trilhas Cadastradas"}
+      ]
+
+    },
+    {
       titulo: "Configuração",
       itens: [
         { path: "/painel-admin/configuracoes-portal", label: "Configurações" }

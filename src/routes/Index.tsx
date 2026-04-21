@@ -43,6 +43,8 @@ import GestaodeAlunos from "../pages/Admin/GestaodeAlunos/Index";
 import DeletarConexoes from "../pages/Admin/DeletarConexao/Index";
 import CadastrarUnidade from "../pages/Admin/CadastratrarUnidade/Index";
 import DiretoresUnidades from "../pages/Admin/DiretoreseUnidades/Index";
+import CadastrarTrilhasCursos from "../pages/Admin/CadastrarTrilhasCursos/Index";
+import TrilhasCadastradasAdmin from "../pages/Admin/TrilhasCadastradasAdmin/Index"
 import ConfiguracaoPortal  from "../pages/Admin/ConfiguracoesPortal/Index";
 
 
@@ -111,6 +113,8 @@ export default function AppRoutes() {
           <Route path="deletar-conexoes" element={<DeletarConexoes />} />
           <Route path="cadastrar-unidades" element={<CadastrarUnidade />} />
           <Route path="diretores-unidades" element={<DiretoresUnidades />} />
+          <Route path="cadastrar-trilhas" element={<CadastrarTrilhasCursos/>}/>
+          <Route path="trilhasAdmin-cadastradas" element={<TrilhasCadastradasAdmin/>}/>
           <Route path="configuracoes-portal" element={<ConfiguracaoPortal />} />
         </Route>
         
